@@ -1,0 +1,13 @@
+{{% if new_course_form %}
+  <h3>Create a New Course</h3>
+  <form method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" name="name"><br>
+    <label for="description">Description:</label>
+    <textarea name="description"></textarea><br>
+    <button type="submit">Create Course</button>
+  </form>
+{% endif %}
+
+<!-- existing course detail HTML goes here -->
