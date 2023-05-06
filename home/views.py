@@ -61,3 +61,9 @@ def learning_detail(request):
 def news(request):
     return render(request,"news.html")
 
+def upload_file(request):
+    if request.method == "POST":
+        uploaded_file = request.FILES['file']
+        # do something with the uploaded file (e.g. save it to the database)
+        return render(request, "file_upload_success.html")
+    return render(request, "file_upload.html")

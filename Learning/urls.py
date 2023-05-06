@@ -22,6 +22,9 @@ from accounts.views import  profile, Logout, Login_View
 from django.urls import path
 
 
+from home.views import upload_file
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
@@ -33,7 +36,7 @@ urlpatterns = [
     url(r'^courses/$', courses, name='courses'),
     url(r'^course_details/$', course_detail, name='course_detail'),
     url(r'^news/$', news, name='news'),
-
+    path('upload/', upload_file, name='upload_file'),
 
 ]
 
